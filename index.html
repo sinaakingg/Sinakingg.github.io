@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>پنل اینستاگرام آنلاین</title>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>پنل شخصی اینستاگرام</h1>
+  </header>
+
+  <!-- ورود مدیر -->
+  <div class="login card" id="loginBox">
+    <h3>ورود مدیر</h3>
+    <input type="password" id="pass" placeholder="رمز عبور">
+    <button onclick="login()">ورود</button>
+  </div>
+
+  <!-- پنل بارگذاری -->
+  <div class="panel hidden" id="panel">
+    <div class="card upload-box">
+      <h3>بارگذاری پست جدید</h3>
+      <input type="file" id="file" accept="image/*">
+      <input type="text" id="caption" placeholder="توضیح پست">
+      <button onclick="addPost()">بارگذاری</button>
+    </div>
+  </div>
+
+  <!-- نمایش پست‌ها -->
+  <div class="grid" id="posts"></div>
+
+  <!-- Firebase + Script -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
